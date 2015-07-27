@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  get '/single_order' => 'products#single'
+  get '/single_order' => 'selling#single'
 
-  get '/membership' => 'products#subscription'
+  get '/subscription' => 'selling#subscription'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+  post '/single_order' => 'selling#single_checkout'
+
+  post '/subscription' => 'selling#subscription_checkout'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
